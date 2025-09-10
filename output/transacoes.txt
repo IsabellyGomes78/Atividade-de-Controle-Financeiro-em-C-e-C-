@@ -1,0 +1,2 @@
+Receita: Salario, Valor: 3000.00
+Despesa: Aluguel, Valor: 1200.00

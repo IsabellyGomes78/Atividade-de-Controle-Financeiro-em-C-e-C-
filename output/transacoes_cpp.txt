@@ -1,0 +1,6 @@
+RECEITA,Salario,3500.00
+DESPESA,Aluguel,1200.00
+DESPESA,Supermercado,450.50
+RECEITA,Trabalho Freelance,800.00
+DESPESA,Internet e TV,149.90
+DESPESA,Transporte,180.00
