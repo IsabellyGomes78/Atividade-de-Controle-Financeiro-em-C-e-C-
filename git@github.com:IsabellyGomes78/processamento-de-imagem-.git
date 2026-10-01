@@ -1,0 +1,105 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPJn3mbE27XFjt42voV+6UQ",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/IsabellyGomes78/Atividade-de-Controle-Financeiro-em-C-e-C-/blob/main/git%40github.com%3AIsabellyGomes78/processamento-de-imagem-.git\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 109
+        },
+        "id": "6laniWRmGBRz",
+        "outputId": "4de7062e-c296-4166-e686-6eeb50d82524"
+      },
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "SyntaxError",
+          "evalue": "invalid syntax (4280512078.py, line 1)",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"/tmp/ipykernel_1621/4280512078.py\"\u001b[0;36m, line \u001b[0;32m1\u001b[0m\n\u001b[0;31m    ++--# 1. Importação das bibliotecas necessárias\u001b[0m\n\u001b[0m        ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+          ]
+        }
+      ],
+      "source": [
+        "++--# 1. Importação das bibliotecas necessárias\n",
+        "import numpy as np\n",
+        "import matplotlib.pyplot as plt\n",
+        "from skimage import data\n",
+        "from skimage.color import rgb2gray\n",
+        "\n",
+        "# 2. Carregamento da imagem escolhida\n",
+        "# Escolhemos a imagem 'chelsea' (foto de um gato em RGB), diferente de coins e astronaut\n",
+        "img_original = data.chelsea()\n",
+        "\n",
+        "# 3. Impressão das informações da imagem no console\n",
+        "print(\"--- Propriedades da Imagem ---\")\n",
+        "# .shape retorna as dimensões da matriz (altura, largura, canais de cor)\n",
+        "print(f\"Dimensões (.shape): {img_original.shape}\")\n",
+        "# type() retorna o tipo da estrutura de dados subjacente (neste caso, um numpy.ndarray)\n",
+        "print(f\"Tipo de estrutura (type): {type(img_original)}\")\n",
+        "# .dtype retorna o tipo de dado de cada pixel (ex: uint8, que vai de 0 a 255)\n",
+        "print(f\"Tipo de dado dos pixels (.dtype): {img_original.dtype}\")\n",
+        "print(\"------------------------------\\n\")\n",
+        "\n",
+        "# 4. Desafio de Processamento\n",
+        "# Como escolhemos uma imagem RGB (3 canais), vamos convertê-la para escala de cinza (1 canal)\n",
+        "img_cinza = rgb2gray(img_original)\n",
+        "\n",
+        "# 5. Exibição das imagens lado a lado usando matplotlib-\n",
+        "# Criamos uma figura com 1 linha e 2 colunas para os gráficos\n",
+        "fig, axes = plt.subplots(1, 2, figsize=(10, 5))\n",
+        "\n",
+        "# Configurando o primeiro subplot (Imagem Original)\n",
+        "axes[0].imshow(img_original)\n",
+        "axes[0].set_title('Imagem Original (RGB)')\n",
+        "axes[0].axis('off') # Remove os eixos (números em volta da imagem)\n",
+        "\n",
+        "# Configurando o segundo subplot (Imagem Processada)\n",
+        "# cmap='gray' é necessário para que o matplotlib renderize a matriz 2D corretamente em tons de cinza\n",
+        "axes[1].imshow(img_cinza, cmap='gray')\n",
+        "axes[1].set_title('Convertida para Escala de Cinza')\n",
+        "axes[1].axis('off')\n",
+        "\n",
+        "# Ajusta o layout para não haver sobreposição de textos e exibe o plot\n",
+        "plt.tight_layout()\n",
+        "plt.show()"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "HeU9tLjPoFPD"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
